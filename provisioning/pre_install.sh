@@ -1,0 +1,3 @@
+# Pre-Install work
+sudo yum update -y
+sudo yum install -y vim
