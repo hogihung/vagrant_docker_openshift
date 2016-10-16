@@ -7,6 +7,7 @@ This Virtual Machine provides:
   3.  Git 2.8.1
   4.  Vim 7.4.160
   5.  Python 2.7.5
+  6.  OpenShift Origin (via Docker Container)
 
 The vagrant id is part of the docker group so that it can run docker related
 commands/tools.
