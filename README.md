@@ -99,3 +99,15 @@ docker exec -it origin bash
 oc
 ```
 
+*Note:  If you stop or reload your VM (vagrant halt, vagrant up OR vagrant reload) you will need to launch the Docker container for OpenShift.*
+
+```
+docker run -d --name "origin" \
+        --privileged --pid=host --net=host \
+        -v /:/rootfs:ro -v /var/run:/var/run:rw -v /sys:/sys -v /var/lib/docker:/var/lib/docker:rw \
+        -v /var/lib/origin/openshift.local.volumes:/var/lib/origin/openshift.local.volumes \
+        openshift/origin start
+```
+
+
+
