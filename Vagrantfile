@@ -2,7 +2,8 @@
 # vi: set ft=ruby :
 
 Vagrant.configure("2") do |config|
-  config.vm.box = "bento/centos-7.1"
+  #config.vm.box = "bento/centos-7.1"
+  config.vm.box = "centos/7"
   config.vm.hostname = "openshift.home.net" 
 
   # Setup static ip address to be used with the Atlassian Suite of Application Servers
@@ -15,7 +16,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", path: 'provisioning/openshift_provision.sh'
 
   # Support for OpenShfit on port 8443
-  config.vm.network "forwarded_port", guest: 8443, host: 8443, id: "openshift"
+  config.vm.network "forwarded_port", guest: 8443, host: 8090, id: "openshift"
 
   config.vm.provider 'virtualbox' do |vb|
     vb.memory = 2048
