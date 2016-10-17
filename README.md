@@ -10,6 +10,7 @@ This Virtual Machine provides:
   6.  Docker 1.12.2
   7.  Python 2.7.5
   8.  OpenShift Origin (via Docker Container)
+  9.  ansible 2.1.1.0
 
 Note: The vagrant user is part of the docker group so that it can run docker 
 related commands/tools.
