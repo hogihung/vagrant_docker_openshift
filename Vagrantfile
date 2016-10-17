@@ -6,8 +6,8 @@ Vagrant.configure("2") do |config|
   config.vm.box = "centos/7"
   config.vm.hostname = "openshift.home.net" 
 
-  # Setup static ip address to be used with the Atlassian Suite of Application Servers
-  config.vm.network "private_network", ip: "192.168.50.90"
+  # Setup static ip address on private network. 
+  #config.vm.network "private_network", ip: "192.168.50.90"
 
   # Run provisioning for pre-install and docker 
   config.vm.provision "shell", path: 'provisioning/pre_install.sh'
