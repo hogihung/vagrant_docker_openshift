@@ -14,6 +14,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", path: 'provisioning/git_provision.sh'
   config.vm.provision "shell", path: 'provisioning/docker_provision.sh'
   config.vm.provision "shell", path: 'provisioning/openshift_provision.sh'
+  config.vm.provision "shell", path: 'provisioning/ansible_provision.sh'
 
   # Support for OpenShfit on port 8443
   config.vm.network "forwarded_port", guest: 8443, host: 8090, id: "openshift"
